@@ -63,7 +63,7 @@ const About = () => {
           <Button
             className="btn"
             sx={{ marginTop: 10 }}
-            href="https://drive.google.com/file/d/1jq44zff5HC3L5zvCF0SGfKkQ_eqm8CUb/view?usp=sharing"
+            href="https://drive.google.com/file/d/1LDsHCMWkb5Ou4zvh_orO9pfIj8heSVb5/view?usp=drivesdk"
             variant="outlined"
         
           >
