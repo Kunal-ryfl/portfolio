@@ -1,8 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@mui/material";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import MailIcon from "@mui/icons-material/Mail";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "framer-motion";
 import Particlebg from "./Particlebg";
@@ -36,7 +33,7 @@ const About = () => {
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
           <h1>
-            Hi, I'm
+            Hi, I&apos;m 
             <span
               style={{
                 transform: isInView ? "none" : "translateX(-200px)",
@@ -45,14 +42,13 @@ const About = () => {
               }}
               className="about-name"
             >
-              
-              Kunal
+             {""} Kunal
             </span>
           </h1>
           <h1> A Front-End Web Developer </h1>
           <p>
             
-            I’ve great interest in frontend development and competitive
+            I&apos; ve great interest in frontend development and competitive
             programming.
           </p>
         </motion.div>
@@ -74,7 +70,7 @@ const About = () => {
 
   <div className="intro">
 
-<h1> I'm a Computer Science student. </h1>
+<h1> I&apos;m a Computer Science student. </h1>
 <h1> I build things for web. </h1>
 <h1> I also love competitive programming. </h1>
   
