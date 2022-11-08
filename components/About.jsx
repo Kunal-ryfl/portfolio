@@ -36,7 +36,7 @@ const About = () => {
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
           <h1>
-            Hi, I'm{" "}
+            Hi, I'm
             <span
               style={{
                 transform: isInView ? "none" : "translateX(-200px)",
@@ -45,13 +45,13 @@ const About = () => {
               }}
               className="about-name"
             >
-              {" "}
+              
               Kunal
-            </span>{" "}
+            </span>
           </h1>
           <h1> A Front-End Web Developer </h1>
           <p>
-            {" "}
+            
             I’ve great interest in frontend development and competitive
             programming.
           </p>
