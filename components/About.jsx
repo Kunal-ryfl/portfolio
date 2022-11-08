@@ -1,24 +1,30 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@mui/material";
-import { motion, useAnimation } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { useInView } from "framer-motion";
 import Particlebg from "./Particlebg";
 
-const cardVariants = {
-  offscreen: {
-    y: 300
-  },
-  onscreen: {
-    y: 50,
-    rotate: -10,
-    transition: {
-      type: "spring",
-      bounce: 0.4,
-      duration: 0.8
-    }
-  }
-};
+const textAnimate={
+  offscreen:{y:100, opacity:0},
+  onscreen:{y:0,
+  opacity:1,
+  transition: {type:"spring",
+  bounce:0.4,
+  duration:1}
+}
+}
 
+const imageAnimate={
+  offscreen:{x:-100, opacity:0},
+  onscreen:{
+  x:0,
+  opacity:1,
+  rotate:[0,10,0],
+  transition: {type:"spring",
+  bounce:0.4,
+  duration:1}
+}
+}
 
 const About = () => {
   const ref = useRef(null);
@@ -57,7 +63,7 @@ const About = () => {
           <Button
             className="btn"
             sx={{ marginTop: 10 }}
-            href="https://drive.google.com/file/d/1LDsHCMWkb5Ou4zvh_orO9pfIj8heSVb5/view"
+            href="https://drive.google.com/file/d/1jq44zff5HC3L5zvCF0SGfKkQ_eqm8CUb/view?usp=sharing"
             variant="outlined"
         
           >
@@ -68,58 +74,86 @@ const About = () => {
         </div>
       </div>
 
-  <div className="intro">
-
-<h1> I&apos;m a Computer Science student. </h1>
-<h1> I build things for web. </h1>
-<h1> I also love competitive programming. </h1>
-  
-  </div>
+  <motion.div className="intro"
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          viewport={{once:false, amount:0.5}}
+          transition={{staggerChildren:0.5}}
+  >          
+<motion.h1
+    variants={textAnimate}
+> I&apos;m a Computer Science student. </motion.h1> 
+<motion.h1
+    variants={textAnimate}
+> I build things for web. </motion.h1>
+<motion.h1
+    variants={textAnimate}> I also love competitive programming. </motion.h1>
+ 
+  </motion.div>
 
       <div className="skill-container">
-        <div className="skill">
+        <motion.div className="skill"
+                
+                >
           <div className="skill-left">
             <h2> Here is </h2>
             <h1> What i have built </h1>
           </div>
 
           <motion.div className="skill-right"
+       initial={"offscreen"}
+                whileInView={"onscreen"}
+                // viewport={{once:false, amount:0.5}}
+                transition={{staggerChildren:0.4}}  
           >
              
 
-             <motion.div className="card" variants={cardVariants}> 
+             <motion.div className="card"  
+          
+            
+             > 
 
              <a href="https://sigma-shop.vercel.app/">
                <motion.img className="card-img" src="Screenshot (21).png"
                    whileHover={{ scale: 1.1 }}
                    whileTap={{ scale: 0.9 }}
+                         
+             variants={imageAnimate}
                /></a>  
                  <a href="https://sigma-shop.vercel.app/">
                <motion.img className="card-img2" src="Screenshot (25).png"
                    whileHover={{ scale: 1.1 }}
-                   whileTap={{ scale: 0.9 }}/>  </a>
-               <h3> Sigma </h3>
-               <p> 
+                   whileTap={{ scale: 0.9 }}
+                   variants={imageAnimate}
+                   />  </a>
+               <motion.h3 variants={textAnimate} > Sigma </motion.h3>
+               <motion.p variants={textAnimate}> 
                  Ecommerce demo web application <br></br>
                 using NEXT.js and SANITY.io
-               </p>
+               </motion.p>
              </motion.div>
 
-             <div className="card"> 
+             <motion.div className="card"
+     
+             > 
              <motion.img className="card-img" src="Screenshot (30).png"
              whileHover={{ scale: 1.1 }}
-             whileTap={{ scale: 0.9 }}/>
+             whileTap={{ scale: 0.9 }}
+             variants={imageAnimate}
+             />
              <motion.img className="card-img2" src="Screenshot (31).png"
              whileHover={{ scale: 1.1 }}
-             whileTap={{ scale: 0.9 }}/>
-             <h3> Portfolio </h3>
-               <p> 
+             whileTap={{ scale: 0.9 }}
+             variants={imageAnimate}
+             />
+             <motion.h3 variants={textAnimate} > Portfolio </motion.h3>
+               <motion.p variants={textAnimate} >  
                   Portfolio website <br/> using NEXT.js , framer motion and material ui.
-               </p>
-             </div>
+               </motion.p>
+             </motion.div>
 
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
