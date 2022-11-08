@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="navbar-container">
-    <h1>    KUNAL.portfilio   </h1>
+    <h1>    KUNAL.portfolio   </h1>
      
     </div>
   );
