@@ -15,7 +15,7 @@ const textAnimate={
 }
 
 const imageAnimate={
-  offscreen:{x:-100, opacity:0},
+  offscreen:{x:0, opacity:0},
   onscreen:{
   x:0,
   opacity:1,
@@ -63,7 +63,7 @@ const About = () => {
           <Button
             className="btn"
             sx={{ marginTop: 10 }}
-            href="https://drive.google.com/file/d/1LDsHCMWkb5Ou4zvh_orO9pfIj8heSVb5/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/10PgP-gsK0DUkA1EINQ-2VdWRUGLSXmPr/view?usp=sharing"
             variant="outlined"
         
           >
@@ -82,12 +82,12 @@ const About = () => {
   >          
 <motion.h1
     variants={textAnimate}
-> I&apos;m a Computer Science student. </motion.h1> 
+> I&apos;m a <span> Computer Science</span> student. </motion.h1> 
 <motion.h1
     variants={textAnimate}
-> I build things for web. </motion.h1>
+> I build things for <span> web</span>. </motion.h1>
 <motion.h1
-    variants={textAnimate}> I also love competitive programming. </motion.h1>
+    variants={textAnimate}> I also love <span>competitive programming</span>. </motion.h1>
  
   </motion.div>
 
@@ -101,16 +101,16 @@ const About = () => {
           </div>
 
           <motion.div className="skill-right"
-       initial={"offscreen"}
-                whileInView={"onscreen"}
-                // viewport={{once:false, amount:0.5}}
-                transition={{staggerChildren:0.4}}  
+
           >
              
 
              <motion.div className="card"  
           
-            
+                   initial={"offscreen"}
+                whileInView={"onscreen"}
+                // viewport={{once:false, amount:0.5}}
+                transition={{staggerChildren:0.4}}  
              > 
 
              <a href="https://sigma-shop.vercel.app/">
@@ -135,6 +135,10 @@ const About = () => {
 
              <motion.div className="card"
      
+     initial={"offscreen"}
+     whileInView={"onscreen"}
+     // viewport={{once:false, amount:0.5}}
+     transition={{staggerChildren:0.4}}  
              > 
              <motion.img className="card-img" src="Screenshot (30).png"
              whileHover={{ scale: 1.1 }}
