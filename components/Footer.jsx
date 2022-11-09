@@ -88,7 +88,6 @@ const Footer = () => {
           </Button>
         </div>
          <p> Developed by Kunal Bhardwaj {'©'} 2022 </p>
-         <p> Happy Coding! </p>
         </motion.div>
   )
 }
