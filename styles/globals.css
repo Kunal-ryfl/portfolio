@@ -123,11 +123,12 @@ font-size: 25px;
   justify-content: center;
 }
 .card{
-  height: 700px; 
+  /* height: 700px;  */
+  height: 100vh;
    color: black;
   /* width: 440px; */
   /* border:solid red 1px; */
-  margin:74px 0 ;
+  margin:75px 0 ;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -168,10 +169,14 @@ font-weight: 700;
   font-size: 70px;
   margin: 15px 0;
 }
+.intro span{
+  color: rgb(16 185 129);
+  font-weight: 800;
+}
 
 /* FOOTER */
 .footer-container{
-height: 200px;
+height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -180,9 +185,31 @@ align-items: center;
 .footer-container p{
  font-size: 10px;
  color: gray;
- margin-top: 10px;
+ margin-top: 20px;
+}
+.foot-row{
+  width: 70%;
+  border-bottom: solid 1px rgb(31 41 55);
+  padding: 15px 15px;
+  margin: 4px auto; 
+  
+}
+.foot-row p{
+  color: rgb(222 29 141);
+  font-size: 14px;
+  font-weight: 700;
+  
 }
 
+.footer-container span{
+  color: rgb(222 29 141);
+}
+
+.footer-container h2{
+  margin-top: 25px;
+  font-size: 25px;
+  margin-bottom: 55px;
+}
 
 @media screen and (max-width: 945px) {
 
@@ -205,12 +232,14 @@ font-size: 13px;
 }
 .skill-left{
   width: 100%;
-  position: static;
+  /* position: static; */
   height: auto;
-  padding: 45px 15px;
+  padding: 75px 15px;
+  z-index: 4;
 }
 .skill-right{
   width: 100%;
+  
 }
 .skill-left h1{
   font-size: 20px;
@@ -220,7 +249,8 @@ font-size: 13px;
   }
 
 .card{
-  height: 300px;
+  height: 100vh;
+  width: 100%;
   margin: 25px 0;
 }
 .card h3{
@@ -235,7 +265,7 @@ font-size: 13px;
   
 
 .card-img , .card-img2{
-  width: 160px;
+  width: 220px;
 }
 .intro{
   height: 100vh;
@@ -253,10 +283,6 @@ font-size: 13px;
   font-size: 20px;
   margin: 5px 0;
 }
-.footer-container{
-  height: 130px;
-}
-
 
 
 }
