@@ -62,7 +62,7 @@ const Footer = () => {
       <div>
           <Button
             className="btn"
-            sx={{ marginTop: 10 }}
+            sx={{ marginTop: 23 }}
             href="https://www.linkedin.com/in/kunal-bhardwaj-b07b87217/"
           >
             
@@ -70,7 +70,7 @@ const Footer = () => {
           </Button>
           <Button
             className="btn"
-            sx={{ marginTop: 10 }}
+            sx={{ marginTop: 23 }}
             color="error"
             href="mailto:kunalsharma070806@gmail.com"
           >
@@ -79,7 +79,7 @@ const Footer = () => {
           </Button>
           <Button
             className="btn"
-            sx={{ marginTop: 10 }}
+            sx={{ marginTop: 23 }}
             color="secondary"
             href="https://github.com/Kunal-ryfl"
           >
