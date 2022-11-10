@@ -19,6 +19,12 @@ a {
 ::-webkit-scrollbar {
   width: 0px;
 }
+
+.arrow{
+  position: absolute;
+   bottom: 15px;
+}
+
 /* Spring */
 .spring {
   position: fixed;
@@ -52,6 +58,7 @@ a {
   align-items: center;
   color: grey;
 }
+
 
 /* ABOUT */
 .about-container {
@@ -111,9 +118,8 @@ a {
   justify-content: center;
 }
 .card {
-  height: 100vh;
+  height: 100vw;
   color: black;
-  margin: 75px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -164,8 +170,8 @@ a {
 .footer-container {
   height: 100vh;
   width: 65%;
-
   margin: 0 auto;
+
 }
 
 .foot-row {
@@ -190,7 +196,7 @@ a {
 
 .foot-top {
   height: 70%;
-  padding: 35px 15px;
+  padding: 75px 15px;
 }
 .contacts {
   display: flex;
@@ -219,6 +225,7 @@ a {
   }
   .skill-left {
     width: 100%;
+    position: sticky;
     height: auto;
     padding: 75px 15px;
     z-index: 4;
@@ -236,7 +243,7 @@ a {
   .card {
     height: 100vh;
     width: 100%;
-    margin: 25px 0;
+    /* margin: 25px 0; */
   }
   .card h3 {
     margin-top: 15px;
@@ -268,6 +275,7 @@ a {
     font-size: 20px;
     margin: 5px 0;
   }
+
 
   .footer-container {
     width: 100%;
