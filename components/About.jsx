@@ -1,8 +1,10 @@
-import React, { useEffect, useRef } from "react";
-import { Button } from "@mui/material";
-import { motion, Variants } from "framer-motion";
+import React, { useEffect, useRef ,useState} from "react";
+import { Button, duration } from "@mui/material";
+import { animate, motion, Variants } from "framer-motion";
 import { useInView } from "framer-motion";
 import Particlebg from "./Particlebg";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 
 const textAnimate={
   offscreen:{y:100, opacity:0},
@@ -13,6 +15,7 @@ const textAnimate={
   duration:1}
 }
 }
+
 
 const imageAnimate={
   offscreen:{x:0, opacity:0},
@@ -26,30 +29,33 @@ const imageAnimate={
 }
 }
 
+
+
 const About = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+
+
   return (
     <>
-      <div className="about-container" ref={ref}>
+      <div className="about-container" >
         <Particlebg />
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
+ 
         >
           <h1>
-            Hi, I&apos;m 
-            <span
-              style={{
-                transform: isInView ? "none" : "translateX(-200px)",
-                opacity: isInView ? 1 : 0,
-                transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
-              }}
+            Hi, I&apos;m
+            <motion.span
+            
+              initial={{scale:0,opacity:0}}
+              animate={{scale:1,opacity:1}}
+              transition={{duration:1,type:'ease'}}
+
               className="about-name"
             >
-             {""} Kunal
-            </span>
+             {""} Kunal 
+            </motion.span>
           </h1>
           <h1> A Front-End Web Developer </h1>
           <p>
@@ -65,13 +71,20 @@ const About = () => {
             sx={{ marginTop: 10 }}
             href="https://drive.google.com/file/d/10PgP-gsK0DUkA1EINQ-2VdWRUGLSXmPr/view?usp=sharing"
             variant="outlined"
-        
+            
           >
             Resume
           
           </Button>
         
         </div>
+
+       <motion.div className="arrow"
+       initial={{y:-30,opacity:1}}
+      animate={{ y:0,opacity:1}}
+      transition={{ type:"spring",  bounce:0.5, duration: 2,  repeat: Infinity,repeatType:"reverse" }}
+       > <KeyboardArrowDownIcon/> </motion.div>
+          
       </div>
 
   <motion.div className="intro"
@@ -159,6 +172,7 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
+
     </>
   );
 };
