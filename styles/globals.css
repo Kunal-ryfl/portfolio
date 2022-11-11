@@ -25,6 +25,14 @@ a {
    bottom: 15px;
 }
 
+
+.loading{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Spring */
 .spring {
   position: fixed;
