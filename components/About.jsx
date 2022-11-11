@@ -1,10 +1,9 @@
 import React, { useEffect, useRef ,useState} from "react";
-import { Button, duration } from "@mui/material";
+import { Button } from "@mui/material";
 import { animate, motion, Variants } from "framer-motion";
-import { useInView } from "framer-motion";
 import Particlebg from "./Particlebg";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
+import FileOpenIcon from '@mui/icons-material/FileOpen';
 
 const textAnimate={
   offscreen:{y:100, opacity:0},
@@ -39,20 +38,22 @@ const About = () => {
       <div className="about-container" >
         <Particlebg />
         <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 400, damping: 17 }}
- 
+          // whileHover={{ scale: 1.1 }}
+          // whileTap={{ scale: 0.9 }}
+          initial={{y:-50,opacity:0}}
+          animate={{y:0,opacity:1}}
+          // transition={{ type: "spring", stiffness: 400, damping: 17 }}
+       transition={{ type:'spring', bounce:0.7, duration: 1 }}
         >
           <h1>
             Hi, I&apos;m
             <motion.span
             
-              initial={{scale:0,opacity:0}}
-              animate={{scale:1,opacity:1}}
-              transition={{duration:1,type:'ease'}}
-
+              initial={{opacity:0}}
+              animate={{opacity:1}}
+              transition={{duration:5,ease: "easeOut",repeat:Infinity,repeatType:"reverse"}}
               className="about-name"
+            
             >
              {""} Kunal 
             </motion.span>
@@ -71,9 +72,9 @@ const About = () => {
             sx={{ marginTop: 10 }}
             href="https://drive.google.com/file/d/10PgP-gsK0DUkA1EINQ-2VdWRUGLSXmPr/view?usp=sharing"
             variant="outlined"
-            
+            startIcon={<FileOpenIcon/>}
           >
-            Resume
+        Resume
           
           </Button>
         
@@ -168,6 +169,7 @@ const About = () => {
                   Portfolio website <br/> using NEXT.js , framer motion and material ui.
                </motion.p>
              </motion.div>
+            
 
           </motion.div>
         </motion.div>
