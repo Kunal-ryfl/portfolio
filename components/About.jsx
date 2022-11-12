@@ -132,10 +132,10 @@ const About = () => {
               <a href="https://sigma-shop.vercel.app/">
                 <motion.img
                   className="card-img"
-                  src="Screenshot (21).png"
+                  src="Screenshot_s1.jpg"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  variants={imageAnimate}
+         
                 />
               </a>
               <a href="https://sigma-shop.vercel.app/">
@@ -144,11 +144,11 @@ const About = () => {
                   src="Screenshot (25).png"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  variants={imageAnimate}
+                 
                 />{" "}
               </a>
-              <motion.h3 variants={textAnimate}> Sigma </motion.h3>
-              <motion.p variants={textAnimate}>
+              <motion.h3 > Sigma </motion.h3>
+              <motion.p >
                 Ecommerce demo web application <br></br>
                 using NEXT.js and SANITY.io
               </motion.p>
@@ -163,20 +163,20 @@ const About = () => {
             >
               <motion.img
                 className="card-img"
-                src="Screenshot (30).png"
+                src="Screenshot_p1.jpg"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                variants={imageAnimate}
+             
               />
               <motion.img
                 className="card-img2"
                 src="Screenshot (31).png"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                variants={imageAnimate}
+         
               />
-              <motion.h3 variants={textAnimate}> Portfolio </motion.h3>
-              <motion.p variants={textAnimate}>
+              <motion.h3 > Portfolio </motion.h3>
+              <motion.p >
                 Portfolio website <br /> using NEXT.js , framer motion and
                 material ui.
               </motion.p>
