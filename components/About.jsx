@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Button } from "@mui/material";
-import { motion } from "framer-motion";
+import { Button, duration } from "@mui/material";
+import { animate, motion } from "framer-motion";
 import Particlebg from "./Particlebg";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FileOpenIcon from "@mui/icons-material/FileOpen";
@@ -24,6 +24,8 @@ const imageAnimate = {
   },
 };
 
+
+
 const About = () => {
   return (
     <>
@@ -33,36 +35,26 @@ const About = () => {
         animate={{ opacity: 1 }}
       >
         <Particlebg />
-        <motion.div
-          // whileHover={{ scale: 1.1 }}
-          // whileTap={{ scale: 0.9 }}
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          // transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          transition={{ type: "spring", bounce: 0.7, duration: 1 }}
-        >
-          <h1>
+      
+          <motion.h1  
+    initial={{y:100,opacity:0}}
+    animate={{y:0,opacity:1}}
+    transition={{duration:0.7,type:'spring'}}
+          >
             Hi, I&apos;m
             <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{
-                duration: 5,
-                ease: "easeOut",
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
               className="about-name"
             >
-              {""} Kunal
+              {""}   Kunal
+          
             </motion.span>
-          </h1>
-          <h1> A Front-End Web Developer </h1>
-          <p>
-            I&apos; ve great interest in frontend development and competitive
-            programming.
-          </p>
-        </motion.div>
+          </motion.h1>
+          <motion.h1 
+  initial={{y:100,opacity:0}}
+  animate={{y:0,opacity:1}}
+  transition={{duration:0.5,type:'spring'}}
+          > A Front-End Web Developer </motion.h1>
+         
 
         <div>
           <Button
@@ -89,11 +81,13 @@ const About = () => {
           }}
         >
           {" "}
-          <KeyboardArrowDownIcon />{" "}
+          <a href="#intro">  
+          <KeyboardArrowDownIcon />{" "}</a>
         </motion.div>
       </motion.div>
 
       <motion.div
+         id='intro'
         className="intro"
         initial={"offscreen"}
         whileInView={"onscreen"}
