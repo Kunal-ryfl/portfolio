@@ -126,17 +126,17 @@ a {
   justify-content: center;
 }
 .card {
-  height: 100vw;
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 85px 0;
 }
 .card-img,
 .card-img2 {
-  width: 350px;
+  width: 200px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -249,9 +249,7 @@ a {
   }
 
   .card {
-    height: 100vh;
     width: 100%;
-    /* margin: 25px 0; */
   }
   .card h3 {
     margin-top: 15px;
@@ -265,7 +263,7 @@ a {
 
   .card-img,
   .card-img2 {
-    width: 220px;
+    width: 170px;
   }
   .intro {
     height: 100vh;
