@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="navbar-container">
       <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         {" "}
-        KUNAL.portfilio{" "}
+        KUNAL.portfolio{" "}
       </motion.h1>
     </div>
   );
