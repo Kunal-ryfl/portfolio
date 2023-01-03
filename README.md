@@ -1,5 +1,5 @@
-##PORTFOLIO 
-
+## PORTFOLIO 
+![Screenshot (30)](https://user-images.githubusercontent.com/73430123/200545919-830a525a-e8e6-49ad-8039-44676d0eace9.png)
 Technologies:-
 ```
 Next.js
