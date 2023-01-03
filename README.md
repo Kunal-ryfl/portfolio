@@ -1,5 +1,6 @@
 ## PORTFOLIO 
 ![Screenshot (30)](https://user-images.githubusercontent.com/73430123/200545919-830a525a-e8e6-49ad-8039-44676d0eace9.png)
+
 Technologies:-
 ```
 Next.js
@@ -9,6 +10,7 @@ Framer Motion
 Particle lib.
 ```
 ScreenShots
+
 ![Screenshot (30)](https://user-images.githubusercontent.com/73430123/200545919-830a525a-e8e6-49ad-8039-44676d0eace9.png)
 ![Screenshot (31)](https://user-images.githubusercontent.com/73430123/200545973-1aa53079-719b-4acd-a8c8-5899cf4deb2e.png)
 
