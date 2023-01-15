@@ -25,7 +25,7 @@ const Footer = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
-      transition={{ staggerChildren: 0.2 }}
+      transition={{ staggerChildren: 0.1 }}
     >
       <motion.div className="footer-container">
         <div className="foot-top">

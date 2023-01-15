@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, duration } from "@mui/material";
-import { animate, motion } from "framer-motion";
+import { useViewportScroll, useScroll,useTransform , motion,useMotionValue } from "framer-motion";
 import Particlebg from "./Particlebg";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FileOpenIcon from "@mui/icons-material/FileOpen";
@@ -14,20 +14,29 @@ const textAnimate = {
   },
 };
 
-const imageAnimate = {
-  offscreen: { x: 0, opacity: 0 },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    rotate: [0, 10, 0],
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
-  },
-};
-
 
 
 
 const About = () => {
+  const x = useMotionValue(0);
+  // const { scrollYProgress } = useViewportScroll();
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1.3, 0.5]);
+  const f1 = useTransform(
+    scrollYProgress,
+    // Map x from these values:
+    [0, 1],
+    // Into these values:
+    [-400,1270]
+  )
+  const f2 = useTransform(
+    scrollYProgress,
+    // Map x from these values:
+    [0, 1],
+    // Into these values:
+    [400, -1270]
+  )
+
   return (
     <>
       <motion.div
@@ -46,7 +55,7 @@ const About = () => {
             <motion.span
               className="about-name"
             >
-              {""}   Kunal
+            {" "}   Kunal
           
             </motion.span>
           </motion.h1>
@@ -69,7 +78,7 @@ const About = () => {
           </Button>
         </div>
 
-        <motion.div
+        {/* <motion.div
           className="arrow"
           initial={{ y: -30, opacity: 1 }}
           animate={{ y: 0, opacity: 1 }}
@@ -84,7 +93,7 @@ const About = () => {
           {" "}
           <a href="#intro">  
           <KeyboardArrowDownIcon />{" "}</a>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
 
       <motion.div
@@ -98,15 +107,23 @@ const About = () => {
         viewport={{ once: true, amount: 0.8 }}
         transition={{ staggerChildren: 0.3 }}
       >
-        <motion.h1 variants={textAnimate}>
+        <motion.h1 style={{x:f1}}
+       
+        // variants={textAnimate}
+        >
           
-          I&apos;m a <span> Computer Science</span> student.
+          I&apos;m a <span > Computer Science</span> student.
         </motion.h1>
-        <motion.h1 variants={textAnimate}>
+        <motion.h1 
+        // variants={textAnimate}
+        >
           
           I build things for <span> web</span>.
         </motion.h1>
-        <motion.h1 variants={textAnimate}>
+        <motion.h1 
+          style={{x:f2}}
+        // variants={textAnimate}
+        >
                     I also love <span>competitive programming</span>.
         </motion.h1>
       </motion.div>
@@ -118,32 +135,35 @@ const About = () => {
             <h1> What i have built </h1>
           </div>
 
-          <motion.div className="skill-right">
+          <motion.div className="skill-right"
+           
+           >
             <motion.div
               className="card"
               initial={"offscreen"}
               whileInView={"onscreen"}
               // viewport={{once:false, amount:0.5}}
-              transition={{ staggerChildren: 0.4 }}
+              // transition={{ staggerChildren: 1 }}
             >
               <a href="https://sigma-shop.vercel.app/">
                 <motion.img
                   className="card-img"
                   src="Screenshot_s1.jpg"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-
+                  // whileHover={{ scale: 1.1 }}
+                  // whileTap={{ scale: 0.9 }}
                   
-                />
+            
+                  />
               </a>
               <a href="https://sigma-shop.vercel.app/">
                 <motion.img
                   className="card-img2"
                   src="Screenshot (25).png"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  // whileHover={{ scale: 1.1 }}
+                  // whileTap={{ scale: 0.9 }}
                  
-                />{" "}
+               
+                  />{" "}
               </a>
               <motion.h3 > Sigma </motion.h3>
               <motion.p >
@@ -162,16 +182,16 @@ const About = () => {
               <motion.img
                 className="card-img"
                 src="Screenshot_p1.jpg"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-            
+                // whileHover={{ scale: 1.1 }}
+                // whileTap={{ scale: 0.9 }}
+           
               />
               <motion.img
                 className="card-img2"
                 src="Screenshot (31).png"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-         
+                // whileHover={{ scale: 1.1 }}
+                // whileTap={{ scale: 0.9 }}
+             
               />
               <motion.h3 > Portfolio </motion.h3>
               <motion.p >

@@ -37,7 +37,7 @@ setTimeout(() => {
   return (
 
 <> 
-  {loading ? <div className="loading">
+  {/* {loading ? <div className="loading">
     
     
     
@@ -162,8 +162,8 @@ setTimeout(() => {
     
      </div>
 
-     :
-    <>
+     : */}
+    {/* <> */}
     <Spring/>
       <header>
         <Navbar />
@@ -179,7 +179,7 @@ setTimeout(() => {
       </footer>
     </>
  
-      }    </>
+      // }    </>
   );
 
 };
