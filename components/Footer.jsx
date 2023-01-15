@@ -5,16 +5,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { motion, Variants } from "framer-motion";
 
-const textAnimate = {
-  offscreen: { x: -100, opacity: 0 },
-  onscreen: {
-    x: 0,
-    opacity: 1,
-    transition: { type: "spring", bounce: 0.4, duration: 1 },
-  },
-};
 
-import { motion, Variants } from "framer-motion";
 
 const textAnimate = {
   offscreen: { x: -100, opacity: 0 },
@@ -91,13 +82,5 @@ const Footer = () => {
     </motion.div>
   );
 };
-
-export default Footer;
-      </motion.div>
-  </>
-  );
-};
-
-export default Footer;
 
 export default Footer
