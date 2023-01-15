@@ -1,11 +1,12 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
     <div className="navbar-container">
-    <h1>    KUNAL.portfilio   </h1>
-     
+      <motion.h1 initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        KUNAL.portfolio
+      </motion.h1>
     </div>
   );
 };
