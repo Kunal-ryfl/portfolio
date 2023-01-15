@@ -19,10 +19,14 @@ const textAnimate = {
 const Footer = () => {
   return (
     <motion.div
-      initial={"offscreen"}
-      whileInView={"onscreen"}
-      viewport={{ once: false, amount: 0.5 }}
-      transition={{ staggerChildren: 0.5 }}
+      // initial={"offscreen"}
+      // whileInView={"onscreen"}
+      // viewport={{ once: false, amount: 0.5 }}
+      // transition={{ staggerChildren: 0.5 }}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+      transition={{ staggerChildren: 0.2 }}
     >
       <motion.div className="footer-container">
         <div className="foot-top">

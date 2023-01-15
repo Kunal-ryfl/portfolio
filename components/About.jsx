@@ -89,22 +89,24 @@ const About = () => {
       <motion.div
          id='intro'
         className="intro"
-        initial={"offscreen"}
-        whileInView={"onscreen"}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ staggerChildren: 0.5 }}
+        // initial={"offscreen"}
+        // whileInView={"onscreen"}
+        // viewport={{ once: false, amount: 0.5 }}
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}
+        transition={{ staggerChildren: 0.3 }}
       >
         <motion.h1 variants={textAnimate}>
-          {" "}
-          I&apos;m a <span> Computer Science</span> student.{" "}
+          
+          I&apos;m a <span> Computer Science</span> student.
         </motion.h1>
         <motion.h1 variants={textAnimate}>
-          {" "}
-          I build things for <span> web</span>.{" "}
+          
+          I build things for <span> web</span>.
         </motion.h1>
         <motion.h1 variants={textAnimate}>
-          {" "}
-          I also love <span>competitive programming</span>.{" "}
+                    I also love <span>competitive programming</span>.
         </motion.h1>
       </motion.div>
 
