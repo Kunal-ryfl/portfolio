@@ -214,6 +214,9 @@ a {
   height: 30%;
   padding: 35px 5px;
 }
+.contacts p{
+  margin-bottom: 8px;
+}
 @media screen and (max-width: 945px) {
   .spring {
     height: 2px;
@@ -267,15 +270,15 @@ a {
     color: black;
     text-align: left;
     display: flex;
-    padding: 5px 15px;
+    padding: 0 30px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
   }
 
   .intro h1 {
-    font-size: 20px;
-    margin: 5px 0;
+    font-size: 25px;
+    margin: 10px 0;
   }
 
 
@@ -289,5 +292,10 @@ a {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+  }
+  .c-btn{
+    
+    margin-top: 5px;
+
   }
 }

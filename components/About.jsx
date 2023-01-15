@@ -26,6 +26,7 @@ const imageAnimate = {
 
 
 
+
 const About = () => {
   return (
     <>
@@ -131,7 +132,8 @@ const About = () => {
                   src="Screenshot_s1.jpg"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-         
+
+                  
                 />
               </a>
               <a href="https://sigma-shop.vercel.app/">
@@ -162,7 +164,7 @@ const About = () => {
                 src="Screenshot_p1.jpg"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-             
+            
               />
               <motion.img
                 className="card-img2"
