@@ -14,26 +14,34 @@ const textAnimate = {
   },
 };
 
+import { motion, Variants } from "framer-motion";
+
+const textAnimate = {
+  offscreen: { x: -100, opacity: 0 },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { type: "spring", bounce: 0.4, duration: 1 },
+  },
+};
+
 const Footer = () => {
   return (
- 
-    <> 
-      <motion.div className="footer-container"
-       initial={"offscreen"}
-       whileInView={"onscreen"}
-       viewport={{ once: false, amount: 0.5 }}
-       transition={{ staggerChildren: 0.5 }}
-      
-      >
+    <motion.div
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ staggerChildren: 0.5 }}
+    >
+      <motion.div className="footer-container">
         <div className="foot-top">
           <h2>
+            {" "}
             My <span> Top </span> Skills{" "}
           </h2>
 
           <div className="foot-row">
-            <motion.p 
-           
-            variants={textAnimate}> Java </motion.p>
+            <motion.p variants={textAnimate}> Java </motion.p>
           </div>
           <div className="foot-row">
             <motion.p variants={textAnimate}> Html/Css </motion.p>
@@ -80,8 +88,16 @@ const Footer = () => {
           </div>
         </div>
       </motion.div>
+    </motion.div>
+  );
+};
+
+export default Footer;
+      </motion.div>
   </>
   );
 };
 
 export default Footer;
+
+export default Footer
