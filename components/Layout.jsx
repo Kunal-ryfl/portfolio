@@ -165,12 +165,11 @@ setTimeout(() => {
      : */}
     {/* <> */}
     <Spring/>
-      <header>
-        <Navbar />
-      </header>
-
-      <main>  
- 
+     <header>
+        {/* <Navbar /> */}
+     </header>
+     
+      <main >   
         <About />
       </main>
 

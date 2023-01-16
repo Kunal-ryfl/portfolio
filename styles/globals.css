@@ -1,5 +1,5 @@
+ 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +11,7 @@
 body {
   background-color: black;
   color: white;
+
 }
 a {
   color: inherit;
@@ -34,6 +35,29 @@ a {
   align-items: center;
 }
 
+
+.land{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.7), 
+    rgba(0, 0, 0, 0.7)
+  ), url("../public/milad-fakurian-YS-Ip34jpHc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  color: rgb(156 163 175);
+}
+
+/* .land::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.6);
+	box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+   border-bottom:  8px solid #222;
+} */
 
 
 /* Spring */
@@ -68,6 +92,8 @@ a {
   justify-content: space-evenly;
   align-items: center;
   color: grey;
+  position: sticky;
+  z-index: 2;
 }
 
 
@@ -81,6 +107,9 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
+  position: sticky;
+  z-index: 2;
 }
 .about-container h1 {
   font-size: 75px;
@@ -125,7 +154,11 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
+
+
+
 .card {
   color: black;
   display: flex;
@@ -153,30 +186,32 @@ a {
   margin-top: 35px;
   font-size: 25px;
   font-weight: 700;
+  
 }
 .card p {
   font-size: 13px;
   margin-top: 15px;
+  
 }
 
 .intro {
-  background-color: white;
-  color: black;
-  text-align: left;
+  /* background-color: white; */
+ 
+  /* text-align: left; */
   /* padding: 135px 55px; */
-  overflow-x: hidden;
-  height: 100vh;
+  overflow: hidden;
+  /* height: 100vh; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
- 
-  
+  justify-content: center;  
+  margin-bottom: 10px;
 }
 
 .intro h1 {
   font-size: 100px;
   margin: 15px 0;
   white-space: nowrap;
+  color: rgb(156 163 175);
 }
 .intro span {
   color: rgb(16 185 129);
@@ -231,6 +266,13 @@ a {
     height: 2px;
   }
 
+
+   /* .land{
+    background-position: 15%;
+  }  */
+
+
+
   .about-container h1 {
     font-size: 24px;
   }
@@ -275,7 +317,7 @@ a {
   }
   .intro {
     /* height: 100vh; */
-    background-color: white;
+    /* background-color: white; */
     color: black;
     /* text-align: left; */
     display: flex;
