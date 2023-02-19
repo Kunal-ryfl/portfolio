@@ -194,6 +194,42 @@ const About = () => {
               // viewport={{once:false, amount:0.5}}
               transition={{ staggerChildren: 0.4 }}
               >
+                <a href="https://tmdb-hant.vercel.app/">
+
+              <motion.img
+                className="card-img"
+                src="megan.jpg"
+                // whileHover={{ scale: 1.1 }}
+                // whileTap={{ scale: 0.9 }}
+                
+                />
+                </a>
+
+                <a href="https://tmdb-hant.vercel.app/">
+
+              <motion.img 
+                className="card-img2"
+                src="Screenshot (184).png"
+                // whileHover={{ scale: 1.1 }}
+                // whileTap={{ scale: 0.9 }}
+                
+                />
+                </a>
+              <motion.h3 > TMDB  </motion.h3>
+              <motion.p >
+                Movie catalogue <br /> using NEXT 13 , Tailwind css and
+                TMDB API.
+              </motion.p>
+            </motion.div>
+            
+
+            <motion.div
+              className="card"
+              initial={"offscreen"}
+              whileInView={"onscreen"}
+              // viewport={{once:false, amount:0.5}}
+              transition={{ staggerChildren: 0.4 }}
+              >
               <motion.img
                 className="card-img"
                 src="Screenshot_p1.jpg"
@@ -214,6 +250,7 @@ const About = () => {
                 material ui.
               </motion.p>
             </motion.div>
+
           </motion.div>
         </motion.div>
       </div>
